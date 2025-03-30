@@ -1,0 +1,15 @@
+=========================== RESUMEN DE OPTIMIZACIÓN ============================
+• Archivo de datos: loan_data_6423_samples_noise_fixed_20250329.csv
+• Iteraciones completadas: 15001
+• Criterio de parada: tolgrad
+• Tolerancia: 1.00e-05
+• Método de paso: backtracking
+• Alpha inicial: 1.00e+00
+• Factor de contracción: 8.00e-01
+• c1: 1.00e-01
+• Máximo iteraciones backtracking: 1000
+• Máximo iteraciones optimización: 15000
+• Tiempo total requerido: 00:49:34
+• Valor función final: 9.2363e-02
+• Norma del gradiente final: 2.1701e-04
+================================================================================
