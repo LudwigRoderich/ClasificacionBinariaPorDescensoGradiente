@@ -188,8 +188,10 @@ def menu():
             # Configurar umbral
             usar_umbral_optimo = input("¿Buscar umbral óptimo? (s/n)(Enter se toma como 's'): ").lower() in ["s", ""]
             if usar_umbral_optimo:
+                CFP = obtener_parametro("Costo de Falsos Positivos (CFP)", float, 0.5, limite_inferior=0)
+                CFN = obtener_parametro("Costo de Falsos Negativos (CFN)", float, 0.5, limite_inferior=0)
                 z_entr = X_train @ parametros_optimos
-                umbral_optimo = aux.encontrar_umbral_optimo(y_train, modelo._funcion_sigmoide(z_entr))
+                umbral_optimo = aux.encontrar_umbral_optimo(y_train, modelo._funcion_sigmoide(z_entr), CFP, CFN)
                 print(f"Umbral óptimo encontrado: {umbral_optimo:.4f}")
             else:
                 umbral_optimo = obtener_parametro("Ingresa el umbral deseado", float, 0.5, limite_inferior=0,  limite_superior=1)

@@ -252,7 +252,7 @@ class Auxiliar:
         
         return np.array([[tn, fp], [fn, tp]])
 
-    def encontrar_umbral_optimo(self, y_real, y_prob, C_FP=1, C_FN=1):
+    def encontrar_umbral_optimo(self, y_real, y_prob, C_FP: float =1, C_FN: float =1):
         """
         Encuentra el umbral que minimiza el costo total.
 
